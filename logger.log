@@ -1,0 +1,83 @@
+2023-01-28T17:36:11.146+05:00  INFO 4476 --- [main] c.e.hibernate.HibernateApplication       : Starting HibernateApplication using Java 18.0.2.1 with PID 4476 (C:\Home\Java\hibernate\target\classes started by evgen in C:\Home\Java\hibernate)
+2023-01-28T17:36:11.147+05:00  INFO 4476 --- [main] c.e.hibernate.HibernateApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-28T17:36:11.878+05:00  INFO 4476 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-28T17:36:11.879+05:00  INFO 4476 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-01-28T17:36:11.937+05:00  INFO 4476 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-28T17:36:12.235+05:00  INFO 4476 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-28T17:36:12.346+05:00  INFO 4476 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4af7dd6a
+2023-01-28T17:36:12.347+05:00  INFO 4476 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-28T17:36:12.373+05:00  INFO 4476 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28T17:36:13.338+05:00  INFO 4476 --- [main] c.e.hibernate.HibernateApplication       : Started HibernateApplication in 2.497 seconds (process running for 2.853)
+2023-01-28T17:36:16.195+05:00  INFO 4476 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-28T17:36:16.259+05:00 ERROR 4476 --- [http-nio-8080-exec-1] c.e.h.exception.ServiceExceptionHandler  : Server error
+2023-01-28T17:38:47.548+05:00  INFO 4476 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-28T17:38:47.550+05:00  INFO 4476 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-28T17:38:50.477+05:00  INFO 8720 --- [main] c.e.hibernate.HibernateApplication       : Starting HibernateApplication using Java 18.0.2.1 with PID 8720 (C:\Home\Java\hibernate\target\classes started by evgen in C:\Home\Java\hibernate)
+2023-01-28T17:38:50.479+05:00  INFO 8720 --- [main] c.e.hibernate.HibernateApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-28T17:38:51.189+05:00  INFO 8720 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-28T17:38:51.189+05:00  INFO 8720 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-01-28T17:38:51.246+05:00  INFO 8720 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-28T17:38:51.541+05:00  INFO 8720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-28T17:38:51.652+05:00  INFO 8720 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@664db2ca
+2023-01-28T17:38:51.654+05:00  INFO 8720 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-28T17:38:51.678+05:00  INFO 8720 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28T17:38:52.676+05:00  INFO 8720 --- [main] c.e.hibernate.HibernateApplication       : Started HibernateApplication in 2.513 seconds (process running for 2.895)
+2023-01-28T17:39:15.256+05:00  INFO 8720 --- [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-28T17:39:15.316+05:00 ERROR 8720 --- [http-nio-8080-exec-3] c.e.h.exception.ServiceExceptionHandler  : Необработанная ошибка
+2023-01-28T17:39:58.582+05:00  INFO 8720 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-28T17:39:58.583+05:00  INFO 8720 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-28T17:40:01.309+05:00  INFO 5628 --- [main] c.e.hibernate.HibernateApplication       : Starting HibernateApplication using Java 18.0.2.1 with PID 5628 (C:\Home\Java\hibernate\target\classes started by evgen in C:\Home\Java\hibernate)
+2023-01-28T17:40:01.310+05:00  INFO 5628 --- [main] c.e.hibernate.HibernateApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-28T17:40:02.009+05:00  INFO 5628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-28T17:40:02.010+05:00  INFO 5628 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-01-28T17:40:02.064+05:00  INFO 5628 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-28T17:40:02.356+05:00  INFO 5628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-28T17:40:02.468+05:00  INFO 5628 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3b28b7b0
+2023-01-28T17:40:02.469+05:00  INFO 5628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-28T17:40:02.493+05:00  INFO 5628 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28T17:40:03.473+05:00  INFO 5628 --- [main] c.e.hibernate.HibernateApplication       : Started HibernateApplication in 2.471 seconds (process running for 2.832)
+2023-01-28T17:40:06.237+05:00  INFO 5628 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-28T17:40:06.300+05:00 ERROR 5628 --- [http-nio-8080-exec-1] c.e.h.exception.ServiceExceptionHandler  : Необработанная ошибка
+2023-01-28T17:40:23.852+05:00  INFO 5628 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-28T17:40:23.854+05:00  INFO 5628 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-28T17:40:26.662+05:00  INFO 14688 --- [main] c.e.hibernate.HibernateApplication       : Starting HibernateApplication using Java 18.0.2.1 with PID 14688 (C:\Home\Java\hibernate\target\classes started by evgen in C:\Home\Java\hibernate)
+2023-01-28T17:40:26.664+05:00  INFO 14688 --- [main] c.e.hibernate.HibernateApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-28T17:40:27.367+05:00  INFO 14688 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-28T17:40:27.367+05:00  INFO 14688 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-01-28T17:40:27.425+05:00  INFO 14688 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-28T17:40:27.720+05:00  INFO 14688 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-28T17:40:27.832+05:00  INFO 14688 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@423f8a73
+2023-01-28T17:40:27.833+05:00  INFO 14688 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-28T17:40:27.857+05:00  INFO 14688 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28T17:40:28.832+05:00  INFO 14688 --- [main] c.e.hibernate.HibernateApplication       : Started HibernateApplication in 2.469 seconds (process running for 2.903)
+2023-01-28T17:40:30.535+05:00  INFO 14688 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-28T17:40:30.599+05:00 ERROR 14688 --- [http-nio-8080-exec-1] c.e.h.exception.ServiceExceptionHandler  : Необработанная ошибка: No class com.example.hibernate.models.Comment entity with id 15515 exists
+2023-01-28T17:44:29.047+05:00  INFO 14688 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-28T17:44:29.049+05:00  INFO 14688 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-28T17:44:32.263+05:00  INFO 10952 --- [main] c.e.hibernate.HibernateApplication       : Starting HibernateApplication using Java 18.0.2.1 with PID 10952 (C:\Home\Java\hibernate\target\classes started by evgen in C:\Home\Java\hibernate)
+2023-01-28T17:44:32.265+05:00  INFO 10952 --- [main] c.e.hibernate.HibernateApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-28T17:44:32.974+05:00  INFO 10952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-28T17:44:32.974+05:00  INFO 10952 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-01-28T17:44:33.030+05:00  INFO 10952 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-28T17:44:33.337+05:00  INFO 10952 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-28T17:44:33.452+05:00  INFO 10952 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@664db2ca
+2023-01-28T17:44:33.454+05:00  INFO 10952 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-28T17:44:33.478+05:00  INFO 10952 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28T17:44:34.459+05:00  INFO 10952 --- [main] c.e.hibernate.HibernateApplication       : Started HibernateApplication in 2.503 seconds (process running for 2.926)
+2023-01-28T17:44:37.546+05:00  INFO 10952 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-28T17:47:08.064+05:00  INFO 10952 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-28T17:47:08.066+05:00  INFO 10952 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-01-28T17:47:10.991+05:00  INFO 14348 --- [main] c.e.hibernate.HibernateApplication       : Starting HibernateApplication using Java 18.0.2.1 with PID 14348 (C:\Home\Java\hibernate\target\classes started by evgen in C:\Home\Java\hibernate)
+2023-01-28T17:47:10.993+05:00  INFO 14348 --- [main] c.e.hibernate.HibernateApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-28T17:47:11.723+05:00  INFO 14348 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-28T17:47:11.723+05:00  INFO 14348 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-01-28T17:47:11.781+05:00  INFO 14348 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-28T17:47:12.084+05:00  INFO 14348 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-28T17:47:12.204+05:00  INFO 14348 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4af7dd6a
+2023-01-28T17:47:12.205+05:00  INFO 14348 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-28T17:47:12.230+05:00  INFO 14348 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-28T17:47:13.220+05:00  INFO 14348 --- [main] c.e.hibernate.HibernateApplication       : Started HibernateApplication in 2.547 seconds (process running for 2.996)
+2023-01-28T17:47:34.747+05:00  INFO 14348 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-28T17:47:34.950+05:00 ERROR 14348 --- [http-nio-8080-exec-1] c.e.h.e.ServiceExceptionHandler          : Ошибка на стороне клиента: Комментарий с таким id не существует
+2023-01-28T17:47:54.556+05:00  INFO 14348 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-28T17:47:54.558+05:00  INFO 14348 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
