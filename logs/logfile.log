@@ -1,0 +1,18 @@
+2023-01-31T14:49:27.966+05:00  INFO 2596 --- [main] c.e.hibernate.HibernateApplication       : Starting HibernateApplication using Java 18.0.2.1 with PID 2596 (C:\Home\Java\hibernate\target\classes started by evgen in C:\Home\Java\hibernate)
+2023-01-31T14:49:27.969+05:00  INFO 2596 --- [main] c.e.hibernate.HibernateApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-01-31T14:49:29.133+05:00  INFO 2596 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-01-31T14:49:29.133+05:00  INFO 2596 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-01-31T14:49:29.239+05:00  INFO 2596 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-01-31T14:49:29.690+05:00  INFO 2596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-01-31T14:49:29.874+05:00  INFO 2596 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7bede4ea
+2023-01-31T14:49:29.876+05:00  INFO 2596 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-01-31T14:49:29.908+05:00  INFO 2596 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-01-31T14:49:31.755+05:00  INFO 2596 --- [main] c.e.hibernate.HibernateApplication       : Started HibernateApplication in 4.211 seconds (process running for 4.72)
+2023-01-31T14:49:35.774+05:00  INFO 2596 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-31T14:49:35.864+05:00  INFO 2596 --- [http-nio-8080-exec-1] c.e.h.controllers.TutorialController     : Start endpoint: getAllTutorials
+2023-01-31T14:49:35.876+05:00  INFO 2596 --- [http-nio-8080-exec-1] c.e.hibernate.services.TutorialService   : Get all tutorials from database
+2023-01-31T14:49:36.147+05:00  INFO 2596 --- [http-nio-8080-exec-1] c.e.h.controllers.TutorialController     : End endpoint: getAllTutorials
+2023-01-31T14:49:47.679+05:00  INFO 2596 --- [http-nio-8080-exec-5] c.e.h.controllers.TutorialController     : Start endpoint: getAllTutorials
+2023-01-31T14:49:47.681+05:00  INFO 2596 --- [http-nio-8080-exec-5] c.e.h.controllers.TutorialController     : End endpoint: getAllTutorials
+2023-01-31T14:49:53.165+05:00  INFO 2596 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-01-31T14:49:53.171+05:00  INFO 2596 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

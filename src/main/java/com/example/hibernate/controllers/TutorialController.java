@@ -27,7 +27,9 @@ public class TutorialController {
 
     @GetMapping("/tutorials/{id}")
     public ResponseEntity<Tutorial> getTutorialById(@PathVariable("id") long id) {
+        log.info("Start endpoint: getTutorialById");
         Tutorial tutorial = tutorialService.getTutorialById(id);
+        log.info("End endpoint: getTutorialById");
         return ResponseEntity.ok(tutorial);
     }
 

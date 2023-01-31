@@ -1,6 +1,6 @@
 package com.example.hibernate.services;
 
-import com.example.hibernate.constants.Exceptions;
+import static com.example.hibernate.constants.Exceptions.*;
 import com.example.hibernate.models.Tutorial;
 import com.example.hibernate.repositories.TutorialRepository;
 import lombok.RequiredArgsConstructor;
@@ -19,19 +19,19 @@ public class TutorialService {
 
     @Cacheable(value="allTutorials")
     public List<Tutorial> getAllTutorials(String title){
-        log.info("Get all tutorials");
+        log.info("Get all tutorials from database");
         return title == null ? tutorialRepository.findAll() : tutorialRepository.findByTitleContaining(title);
     }
 
     @Cacheable(value="allTutorials")
     public Tutorial getTutorialById(Long id){
         log.info("Get tutorial by id: " + id);
-        return tutorialRepository.findById(id).orElseThrow(() -> Exceptions.TUTORIAL_ID_NOT_EXISTS);
+        return tutorialRepository.findById(id).orElseThrow(() -> EXCEPTION_TUTORIAL_ID_NOT_EXISTS);
     }
 
     @Cacheable(value="allTutorials")
     public List<Tutorial> getTutorialByPublished(){
-        log.info("Get published tutorials");
+        log.info("Get published tutorials from database");
         return tutorialRepository.findByPublished(true);
     }
 
@@ -47,7 +47,8 @@ public class TutorialService {
 
     @CacheEvict(value="allTutorials", allEntries = true)
     public Tutorial updateTutorial(Long id, Tutorial tutorial){
-        Tutorial newTutorial = tutorialRepository.findById(id).orElseThrow(() -> Exceptions.TUTORIAL_ID_NOT_EXISTS);
+        log.info("Update tutorial with id: " + id + " on: " + tutorial);
+        Tutorial newTutorial = tutorialRepository.findById(id).orElseThrow(() -> EXCEPTION_TUTORIAL_ID_NOT_EXISTS);
         newTutorial.setTitle(tutorial.getTitle());
         newTutorial.setDescription(tutorial.getDescription());
         newTutorial.setPublished(tutorial.isPublished());
@@ -56,12 +57,14 @@ public class TutorialService {
 
     @CacheEvict(value="allTutorials", allEntries = true)
     public void deleteAllTutorials(){
+        log.info("Delete all tutorials from database");
         tutorialRepository.deleteAll();
     }
 
     @CacheEvict(value="allTutorials", allEntries = true)
     public void deleteTutorialById(Long id){
-        Tutorial tutorial = tutorialRepository.findById(id).orElseThrow(() -> Exceptions.TUTORIAL_ID_NOT_EXISTS);
+        log.info("Delete tutorial from database with id: " + id);
+        Tutorial tutorial = tutorialRepository.findById(id).orElseThrow(() -> EXCEPTION_TUTORIAL_ID_NOT_EXISTS);
         tutorialRepository.deleteById(tutorial.getId());
     }
 }

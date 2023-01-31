@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ServiceExceptionHandler {
     @ExceptionHandler(ServiceException.class)
     public ResponseEntity<ErrorResponse> noSuchElementException(ServiceException ex){
-        log.error("Ошибка на стороне клиента: " + ex.getMessage());
+        log.error("Error: " + ex.getMessage());
         return new ResponseEntity<>(ErrorResponse
                 .builder()
                 .error(Error
@@ -27,13 +27,13 @@ public class ServiceExceptionHandler {
 
     @ExceptionHandler(Throwable.class)
     public ResponseEntity<ErrorResponse> someExceptions(Exception ex){
-        log.error("Необработанная ошибка: " + ex.getMessage());
+        log.error("Unhandled error: " + ex.getMessage());
         return new ResponseEntity<>(ErrorResponse
                 .builder()
                 .error(Error
                         .builder()
                         .code(Code.SERVER_EXCEPTION)
-                        .message("Необработанная ошибка на стороне сервера")
+                        .message("Unhandled server error")
                         .build())
                 .build(), HttpStatus.BAD_REQUEST);
     }

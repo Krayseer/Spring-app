@@ -1,6 +1,6 @@
 package com.example.hibernate.services;
 
-import com.example.hibernate.constants.Exceptions;
+import static com.example.hibernate.constants.Exceptions.*;
 import com.example.hibernate.models.Comment;
 import com.example.hibernate.repositories.CommentRepository;
 import com.example.hibernate.repositories.TutorialRepository;
@@ -18,36 +18,36 @@ public class CommentService {
     public List<Comment> getCommentsByTutorialId(Long id){
         List<Comment> comment = commentRepository.findByTutorialId(id);
         if (comment.isEmpty())
-            throw Exceptions.TUTORIAL_ID_NOT_EXISTS;
+            throw EXCEPTION_TUTORIAL_ID_NOT_EXISTS;
         return comment;
     }
 
     public Comment getCommentById(Long id){
-        return commentRepository.findById(id).orElseThrow(() -> Exceptions.COMMENT_ID_NOT_EXISTS);
+        return commentRepository.findById(id).orElseThrow(() -> EXCEPTION_COMMENT_ID_NOT_EXISTS);
     }
 
     public Comment createComment(Long id, Comment comment){
         return tutorialRepository.findById(id).map(tutorial -> {
             comment.setTutorial(tutorial);
             return commentRepository.save(comment);
-        }).orElseThrow(() -> Exceptions.TUTORIAL_ID_NOT_EXISTS);
+        }).orElseThrow(() -> EXCEPTION_COMMENT_ID_NOT_EXISTS);
     }
 
     public Comment updateComment(Long id, Comment commentRequest){
-        Comment comment = commentRepository.findById(id).orElseThrow(() -> Exceptions.COMMENT_ID_NOT_EXISTS);
+        Comment comment = commentRepository.findById(id).orElseThrow(() -> EXCEPTION_COMMENT_ID_NOT_EXISTS);
         comment.setContent(commentRequest.getContent());
         return commentRepository.save(comment);
     }
 
     public void deleteComment(Long id){
         if(!commentRepository.existsById(id))
-            throw Exceptions.COMMENT_ID_NOT_EXISTS;
+            throw EXCEPTION_COMMENT_ID_NOT_EXISTS;
         commentRepository.deleteById(id);
     }
 
     public void deleteAllTutorialComments(Long id){
         if (!tutorialRepository.existsById(id))
-            throw Exceptions.TUTORIAL_ID_NOT_EXISTS;
+            throw EXCEPTION_COMMENT_ID_NOT_EXISTS;
         commentRepository.deleteByTutorialId(id);
     }
 }
