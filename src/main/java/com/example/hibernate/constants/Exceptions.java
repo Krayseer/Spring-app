@@ -15,5 +15,12 @@ public class Exceptions {
             .code(Code.COMMENT_ID_NOT_EXISTS)
             .message("Comment with this id does not exist")
             .httpStatus(HttpStatus.BAD_REQUEST)
-            .build();;
+            .build();
+
+    public static final ServiceException EXCEPTION_EMPTY_LIST = ServiceException
+            .builder()
+            .code(Code.EMPTY_RESULT)
+            .message("This tutorial has no comments")
+            .httpStatus(HttpStatus.OK)
+            .build();
 }

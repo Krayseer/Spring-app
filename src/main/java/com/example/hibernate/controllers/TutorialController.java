@@ -35,7 +35,9 @@ public class TutorialController {
 
     @GetMapping("/tutorials/published")
     public ResponseEntity<List<Tutorial>> findByPublished() {
+        log.info("Start endpoint: findByPublished");
         List<Tutorial> tutorials = tutorialService.getTutorialByPublished();
+        log.info("End endpoint: findByPublished");
         return ResponseEntity.ok(tutorials);
     }
 
@@ -50,19 +52,25 @@ public class TutorialController {
     @PutMapping("/tutorials/{id}")
     public ResponseEntity<Tutorial> updateTutorial(@PathVariable("id") long id,
                                                    @RequestBody Tutorial tutorial) {
+        log.info("Start endpoint: updateTutorial");
         Tutorial newTutorial = tutorialService.updateTutorial(id, tutorial);
+        log.info("End endpoint: updateTutorial");
         return new ResponseEntity<>(newTutorial, HttpStatus.OK);
     }
 
     @DeleteMapping("/tutorials")
     public ResponseEntity<HttpStatus> deleteAllTutorials() {
+        log.info("Start endpoint: deleteAllTutorials");
         tutorialService.deleteAllTutorials();
+        log.info("End endpoint: deleteAllTutorials");
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping("/tutorials/{id}")
     public ResponseEntity<HttpStatus> deleteTutorial(@PathVariable("id") long id) {
+        log.info("Start endpoint: deleteTutorial");
         tutorialService.deleteTutorialById(id);
+        log.info("End endpoint: deleteTutorial");
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }

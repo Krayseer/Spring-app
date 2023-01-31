@@ -17,25 +17,25 @@ import java.util.List;
 public class TutorialService {
     private final TutorialRepository tutorialRepository;
 
-    @Cacheable(value="allTutorials")
+    @Cacheable(value= "tutorials")
     public List<Tutorial> getAllTutorials(String title){
         log.info("Get all tutorials from database");
         return title == null ? tutorialRepository.findAll() : tutorialRepository.findByTitleContaining(title);
     }
 
-    @Cacheable(value="allTutorials")
+    @Cacheable(value= "tutorials")
     public Tutorial getTutorialById(Long id){
         log.info("Get tutorial by id: " + id);
         return tutorialRepository.findById(id).orElseThrow(() -> EXCEPTION_TUTORIAL_ID_NOT_EXISTS);
     }
 
-    @Cacheable(value="allTutorials")
+    @Cacheable(value= "tutorials")
     public List<Tutorial> getTutorialByPublished(){
         log.info("Get published tutorials from database");
         return tutorialRepository.findByPublished(true);
     }
 
-    @CacheEvict(value="allTutorials", allEntries = true)
+    @CacheEvict(value= "tutorials", allEntries = true)
     public Tutorial createTutorial(Tutorial tutorial){
         log.info("Create new tutorial: " + tutorial);
         return tutorialRepository.save(Tutorial
@@ -45,7 +45,7 @@ public class TutorialService {
                 .published(tutorial.isPublished()).build());
     }
 
-    @CacheEvict(value="allTutorials", allEntries = true)
+    @CacheEvict(value= "tutorials", allEntries = true)
     public Tutorial updateTutorial(Long id, Tutorial tutorial){
         log.info("Update tutorial with id: " + id + " on: " + tutorial);
         Tutorial newTutorial = tutorialRepository.findById(id).orElseThrow(() -> EXCEPTION_TUTORIAL_ID_NOT_EXISTS);
@@ -55,13 +55,13 @@ public class TutorialService {
         return tutorialRepository.save(newTutorial);
     }
 
-    @CacheEvict(value="allTutorials", allEntries = true)
+    @CacheEvict(value= "tutorials", allEntries = true)
     public void deleteAllTutorials(){
         log.info("Delete all tutorials from database");
         tutorialRepository.deleteAll();
     }
 
-    @CacheEvict(value="allTutorials", allEntries = true)
+    @CacheEvict(value= "tutorials", allEntries = true)
     public void deleteTutorialById(Long id){
         log.info("Delete tutorial from database with id: " + id);
         Tutorial tutorial = tutorialRepository.findById(id).orElseThrow(() -> EXCEPTION_TUTORIAL_ID_NOT_EXISTS);

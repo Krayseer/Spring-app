@@ -33,8 +33,8 @@ public class ServiceExceptionHandler {
                 .error(Error
                         .builder()
                         .code(Code.SERVER_EXCEPTION)
-                        .message("Unhandled server error")
+                        .message("Unhandled server error: " + ex.getMessage())
                         .build())
-                .build(), HttpStatus.BAD_REQUEST);
+                .build(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
