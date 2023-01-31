@@ -15,10 +15,9 @@ import java.util.List;
 public class CommentController {
     private final CommentService commentService;
 
-
     @GetMapping("/tutorials/{tutorialId}/comments")
     public ResponseEntity<List<Comment>> getTutorialComments(@PathVariable(value = "tutorialId") Long tutorialId) {
-        var comments = commentService.getCommentsByTutorialId(tutorialId);
+        List<Comment> comments = commentService.getCommentsByTutorialId(tutorialId);
         return new ResponseEntity<>(comments, HttpStatus.OK);
     }
 

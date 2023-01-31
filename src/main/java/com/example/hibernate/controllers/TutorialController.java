@@ -3,12 +3,14 @@ package com.example.hibernate.controllers;
 import com.example.hibernate.models.Tutorial;
 import com.example.hibernate.services.TutorialService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api")
@@ -17,7 +19,9 @@ public class TutorialController {
 
     @GetMapping("/tutorials")
     public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String title) {
+        log.info("Start endpoint: getAllTutorials");
         List<Tutorial> tutorials = tutorialService.getAllTutorials(title);
+        log.info("End endpoint: getAllTutorials");
         return ResponseEntity.ok(tutorials);
     }
 
@@ -35,7 +39,9 @@ public class TutorialController {
 
     @PostMapping("/tutorials")
     public ResponseEntity<Tutorial> createTutorial(@RequestBody Tutorial tutorial) {
+        log.info("Start endpoint: createTutorial");
         Tutorial newTutorial = tutorialService.createTutorial(tutorial);
+        log.info("End endpoint: createTutorial");
         return new ResponseEntity<>(newTutorial, HttpStatus.CREATED);
     }
 
